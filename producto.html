@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/simple-lightbox.css">
+    <link rel="stylesheet" href="fonts/fa/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="branding">
+                <h1>Producto</h1>
+            </div>
+        </header>
+        <!-- HEADER -->
+        <section class="product-details">
+            <div id="product-info">
+                <!-- Product info will be populated by JavaScript -->
+            </div>
+        </section>
+        <!-- PRODUCT DETAILS -->
+        <footer>
+            <div class="social">
+                Follow
+                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                <a href="#"><i class="fa-brands fa-behance"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <a href="https://layoutflow.com/website-templates/designfolio/" target="_blank" class="link">Download This Template</a>
+        </footer>
+        <!-- FOOTER -->
+    </main>
+    <script>
+        $(document).ready(function(){
+            // CSV data as a string (same as in index.html)
+            const csvData = `24-25 Real Madrid Jackets ,https://img.zhidian-inc.cn/cheap-soccerjerseys/deb29fb6/small.jpeg,La Liga
+24-25 Real Madrid Kids Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/a03a2f48/small.png,La Liga
+23-24 Atletico Madrid Away Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/84d2f737/small.png,La Liga
+23-24 Atletico Madrid Home Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/8e8b5f06/small.png,La Liga
+24-25 Real Madrid Hoodie ,https://img.zhidian-inc.cn/cheap-soccerjerseys/facbcfa1/small.jpg,La Liga
+Mon-treal Can-adiens,https://img.zhidian-inc.cn/cheap-soccerjerseys/ada286e4/small.jpg,La Liga
+Real Ma-drid home white player version,https://img.zhidian-inc.cn/cheap-soccerjerseys/9d8c2ab8/small.jpg,La Liga
+21-22 Real Madrid Home Retro Long Sleeve Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/893a8481/small.jpg,La Liga
+23-24 Real Madrid Training Soccer Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/28551589/small.jpeg,La Liga
+24-25 Real Madrid Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/1b07c47e/small.jpeg,La Liga
+87-89 Real Madrid Home Retro Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/77114f11/small.jpeg,La Liga
+23-24 Real Madrid Special Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/41f3695a/small.jpeg,La Liga
+23-24 Real Madrid Kids Special Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/593fcad3/small.jpeg,La Liga
+2017-18 Real Madrid Home Retro Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/07dd6437/small.jpg,La Liga
+24-25 Real Madrid Special Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/40d9c71c/small.jpg,La Liga
+23-24 Atletico Madrid Third Kids Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/fd9654f0/small.jpeg,La Liga
+23-24 Real Madrid Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/7d759d68/small.jpg,La Liga
+23-24 Real Madrid Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/8af0f5ff/small.jpg,La Liga
+24-25 Mallorca Home Kids Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/b5e09a6f/small.jpg,La Liga
+2012-13 Real Madrid Retro Soccer Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/79112962/small.jpg,La Liga
+Real Madrid 13 trophy Commemorative Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/dcc94198/small.jpg,La Liga
+2016-17 Real Madrid Home Retro Shorts ,https://img.zhidian-inc.cn/cheap-soccerjerseys/25b5a81e/small.jpg,La Liga
+24-25 Real Madrid Special Player Version Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/a96055d6/small.jpg,La Liga
+21-22 Real Madrid Third Retro Long Sleeve Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/589e172b/small.jpg,La Liga
+86-87 Real Madrid Away Retro Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/f1655c9c/small.jpg,La Liga
+23-24 Real Oviedo Third Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/f1b8444a/small.jpeg,La Liga
+24-25 Real Madrid Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/1a40f1e4/small.jpeg,La Liga
+24-25 Real Madrid Kids Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/326cbf3b/small.jpeg,La Liga
+24-25 Real Madrid Training Soccer Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/32c2ae8b/small.jpg,La Liga
+24-25 Barc Kids Jackets ,https://img.zhidian-inc.cn/cheap-soccerjerseys/a83bc4cb/small.jpg,La Liga
+24-25 Las Palmas Away Retro Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/0d0292ec/small.jpg,La Liga
+24-25 Atletico Madrid Home Player Version Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/6e148bb3/small.jpeg,La Liga
+24-25 Real Madrid Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/b131934f/small.jpg,La Liga
+24-25 Atletico Madrid Away Player Version Soccer Jerseys ,https://img.zhidian-inc.cn/cheap-soccerjerseys/76da5135/small.jpeg,La Liga
+24-25 Atletico Madrid Player Kids Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/ed3cc4af/medium.jpeg,La Liga
+24-25 Atletico Madrid Player Kids Long Sleeve Training Suit ,https://img.zhidian-inc.cn/cheap-soccerjerseys/861ad611/small.jpeg,La Liga`;
+
+            // Parse CSV data
+            const items = csvData.split('\n').map((line, index) => {
+                const [name, img, link] = line.split(',');
+                return { id: index + 1, name, img, link };
+            });
+
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+
+            // Find product by ID
+            const product = items.find(item => item.id === productId);
+
+            // Update HTML with product info
+            if (product) {
+                const productInfo = document.getElementById('product-info');
+                productInfo.innerHTML = `
+                    <h2>${product.name}</h2>
+                    <img src="${product.img}" alt="${product.name}" />
+                    <p>League: ${product.link}</p>
+                `;
+            } else {
+                const productInfo = document.getElementById('product-info');
+                productInfo.innerHTML = `<p>Product not found.</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
